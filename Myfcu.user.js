@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Myfcu++
 // @namespace    http://nicky.esy.es/
-// @version      0.4
+// @version      0.5
 // @description  Change Myfcu menu to tree mode
 // @author       Dream_Rhythm
 // @match        https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx*
@@ -277,7 +277,14 @@ function addItem(name,FloderID,url,end){
         url="https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx#/prog/"+url;
         outURL=false;
     }
-    let html="<div class='"+FloderID+"'style='width:270px;height:23px;display:none;' onClick='hideMenu()'>&nbsp;&nbsp;";
+    let html="<div class='"+FloderID+"'style='width:270px;height:23px;display:none;'";
+    if(outURL==false){
+        html+="onClick='hideMenu(1)'";
+    }
+    else{
+        html+="onClick='hideMenu(0)'";
+    }
+    html+=">&nbsp;&nbsp;";
     if(end==true)html+="└";
     else html+="├";
     html+="<a href='"+url+"' style='color:black;'";
@@ -379,9 +386,91 @@ function setMenuHeight(){
         menu.style.overflow='';
     }
 }
-function hideMenu(){
+function hideMenu(OpenAlert){
     var menu = document.getElementsByClassName('ng-binding div-Balloon')[0];
     menu.setAttribute("class","ng-binding div-Balloon div-Balloon-hide");
+    if(OpenAlert==1){
+        Alert('頁面載入中...');
+    }
+}
+function Alert(str) {
+    var msgw,msgh,bordercolor;
+    msgw=350;//提示窗口的宽度
+    msgh=100;//提示窗口的高度
+    let titleheight=25 //提示窗口标题高度
+    bordercolor="#666";//提示窗口的边框颜色
+    let titlecolor="#BCD";//提示窗口的标题颜色
+    var sWidth,sHeight;
+    //获取当前窗口尺寸
+    sWidth = document.body.offsetWidth;
+    sHeight = document.body.offsetHeight;
+//    //背景div
+    var bgObj=document.createElement("div");
+    bgObj.setAttribute('id','alertbgDiv');
+    bgObj.style.position="absolute";
+    bgObj.style.top="0";
+    bgObj.style.background="#FFF";
+    bgObj.style.filter="progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75";
+    bgObj.style.opacity="0.6";
+    bgObj.style.left="0";
+    bgObj.style.width = sWidth + "px";
+    bgObj.style.height = sHeight + "px";
+    bgObj.style.zIndex = "10000";
+    document.body.appendChild(bgObj);
+    //创建提示窗口的div
+    var msgObj = document.createElement("div")
+    msgObj.setAttribute("id","alertmsgDiv");
+    msgObj.setAttribute("align","center");
+    msgObj.style.background="white";
+    msgObj.style.border="1px solid " + bordercolor;
+    msgObj.style.position = "absolute";
+    msgObj.style.left = "50%";
+    msgObj.style.font="12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+    //窗口距离左侧和顶端的距离
+    msgObj.style.marginLeft = "-225px";
+    //窗口被卷去的高+（屏幕可用工作区高/2）-150
+    msgObj.style.top = document.body.scrollTop+(window.screen.availHeight/2)-150 +"px";
+    msgObj.style.width = msgw + "px";
+    msgObj.style.height = msgh + "px";
+    msgObj.style.textAlign = "center";
+    msgObj.style.lineHeight ="25px";
+    msgObj.style.zIndex = "10001";
+    document.body.appendChild(msgObj);
+    //提示信息标题
+    var title=document.createElement("h4");
+    title.setAttribute("id","alertmsgTitle");
+    title.setAttribute("align","left");
+    title.style.margin="0";
+    title.style.padding="3px";
+    title.style.background = "#D1E9F7";
+    title.style.filter="progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20, finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100);";
+    title.style.opacity="0.75";
+    title.style.border="1px solid " + bordercolor;
+    title.style.height="18px";
+    title.style.font="12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+    title.style.color="black";
+    title.innerHTML="提示信息!";
+    document.getElementById("alertmsgDiv").appendChild(title);
+    //提示信息
+    var txt = document.createElement("p");
+    txt.setAttribute("id","msgTxt");
+    txt.style.margin="16px 0";
+    txt.innerHTML = str;
+    document.getElementById("alertmsgDiv").appendChild(txt);
+}
+function closewin() {
+    document.body.removeChild(document.getElementById("alertbgDiv"));
+    document.getElementById("alertmsgDiv").removeChild(document.getElementById("alertmsgTitle"));
+    document.body.removeChild(document.getElementById("alertmsgDiv"));
+}
+function waitLoad(){
+    closewin();
+}
+function waitLoad3(){
+    document.getElementById('main').onload=waitLoad;
+}
+function waitLoad2(){
+    setTimeout(function(){ waitLoad3(); },3000);
 }
 function start(){
     let place= document.getElementsByClassName('div-Balloon')[0];
@@ -419,11 +508,12 @@ function start(){
     let AllScript = changeView.toString()+'\n'+oreign_macker.toString()+'\n'+block_maker.toString();
     AllScript+='\n'+tree_maker.toString()+'\n'+addFloder.toString()+'\n'+OpenClose.toString();
     AllScript+='\n'+addItem.toString()+'\n'+Apps_maker.toString()+'\n'+hideMenu.toString();
-    AllScript+='var totalShowItem=0;\n'+setMenuHeight.toString()+'document.getElementsByTagName("BODY")[0].onresize = function() {setMenuHeight()};';
+    AllScript+='\nvar totalShowItem=0;\n'+setMenuHeight.toString()+'document.getElementsByTagName("BODY")[0].onresize = function() {setMenuHeight()};window.onload=waitLoad2;';
+    AllScript+='\n'+waitLoad.toString()+waitLoad2.toString()+waitLoad3.toString()+closewin.toString()+Alert.toString();
     script.textContent = AllScript;
     document.body.appendChild(script);
 }
 
-
 start();
+
 var totalShowItem=0;
