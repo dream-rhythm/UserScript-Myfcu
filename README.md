@@ -16,20 +16,17 @@
 1.新增載入中提視窗
 
 - Ver 0.4  
-
 1. 修復官方版目錄也會被resize函數影響導致跑版的問題  
 2. edge及Safari不吃.before()函式之問題  
 3. 支援edge及Safari  
 4. First Git  
   
 - Ver 0.3  
-
 1. 在螢幕解析度太低的狀況下，將會導致無法完整顯示所有選項  
 2. 點擊功能後，選單不會自動關閉  
 3. 支援Firefox for Android  
   
 - Ver 0.2  
-
 1. 修復連結錯誤的問題  
   
 ### 安裝方法  
