@@ -1,13 +1,42 @@
 // ==UserScript==
 // @name         Myfcu++
 // @namespace    http://nicky.esy.es/
-// @version      0.5
+// @version      0.6
 // @description  Change Myfcu menu to tree mode
 // @author       Dream_Rhythm
 // @match        https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx*
-// @grant        none
+// @grant        GM.setValue
+// @grant        GM.getValue
 // @downloadURL  http://nicky.esy.es/UserScript/Myfcu.user.js
 // ==/UserScript==
+
+var devUser = false;
+
+function JsonPaser(txt){
+    let html="";
+    let obj = JSON.parse(txt);
+    for(let i=0;i<obj.data.length;i++){
+        let floder = obj.data[i];
+        if(floder.type=='floder'){
+            if(floder.url=='nil'){
+                 html+=addFloder(floder.txt,'Floder'+(i+1));
+            }
+            else{
+                html+=addFloder(floder.txt,'Floder'+(i+1),floder.url);
+            }
+            for(let j=0;j<floder.item.length;j++){
+                let item = floder.item[j];
+                if(j==floder.item.length-1){
+                    html+=addItem(item.txt,'Floder'+(i+1),item.url,true);
+                }
+                else{
+                    html+=addItem(item.txt,'Floder'+(i+1),item.url,false);
+                }
+            }
+        }
+    }
+    return html;
+}
 
 function Apps_maker(){
     //此區可以隨便你改
@@ -25,13 +54,18 @@ function Apps_maker(){
     //若會跳轉到站外頁面，需填寫完整網址，且會以新分頁開啟連結
     //是否為該資料夾最後功能 只有填寫true會有動作而已
     //目的是把最前面的符號從├ 改成└
+    var viewJSON='{"data":['+
+        '{"txt":"畢業生專區","type":"floder","url":"nil","item":['+
+            '{"txt":"學位服領取歸還查詢","type":"item","url":"SP8100002"},'+
+            '{"txt":"畢業離校流程資訊查詢","type":"item","url":"SP810003"},'+
+            '{"txt":"畢業典禮邀請函通訊資料","type":"item","url":"SP810004"},'+
+            '{"txt":"問卷系統","type":"item","url":"http://survey.fcu.edu.tw/Login.aspx"}'+
+        ']}'+
+
+    ']}';
 
     let html="";
-    html+=addFloder('畢業生專區','Floder1');
-    html+=addItem('學位服領取歸還查詢','Floder1','SP8100002');
-    html+=addItem('畢業離校流程資訊查詢','Floder1','SP8100003');
-    html+=addItem('畢業典禮邀請函通訊資料','Floder1','SP8100004');
-    html+=addItem('問卷系統','Floder1','http://survey.fcu.edu.tw/Login.aspx',true);
+    html = JsonPaser(viewJSON);
 
     html+=addFloder('安定就學專區','Floder2');
     html+=addItem('就學貸款線上申請','Floder2','SP4100003');
@@ -272,13 +306,16 @@ function tree_maker(){
 }
 
 function addItem(name,FloderID,url,end){
-    var outURL=true;
+    var outURL=1;
     if(url.substr(0,2)=='SP'){
         url="https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx#/prog/"+url;
-        outURL=false;
+        outURL=0;
+    }
+    else if(url.substr(0,2)=='ja'){
+        outURL=2;
     }
     let html="<div class='"+FloderID+"'style='width:270px;height:23px;display:none;'";
-    if(outURL==false){
+    if(outURL==0){
         html+="onClick='hideMenu(1)'";
     }
     else{
@@ -288,7 +325,7 @@ function addItem(name,FloderID,url,end){
     if(end==true)html+="└";
     else html+="├";
     html+="<a href='"+url+"' style='color:black;'";
-    if(outURL==true){
+    if(outURL==1){
         html+=' target="_blank" ';
     }
     html+=">&nbsp;&nbsp;"+name+"</a></div>";
@@ -298,12 +335,12 @@ function addItem(name,FloderID,url,end){
 function addFloder(name,ElementID,url){
     if(url==null){
         return "<div style='width:270px;'><a href='javascript: function(){return false;}' onclick=OpenClose('"+ElementID+"')>"+
-            "<img id="+ElementID+" src='https://visualpharm.com/assets/889/Folder-595b40b65ba036ed117d40dd.svg' width='25' height='25'>"+
+            "<img id="+ElementID+" src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZBMDAwIiBkPSJNNDAsMTJIMjJsLTQtNEg4Yy0yLjIsMC00LDEuOC00LDR2OGg0MHYtNEM0NCwxMy44LDQyLjIsMTIsNDAsMTJ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZDQTI4IiBkPSJNNDAsMTJIOGMtMi4yLDAtNCwxLjgtNCw0djIwYzAsMi4yLDEuOCw0LDQsNGgzMmMyLjIsMCw0LTEuOCw0LTRWMTZDNDQsMTMuOCw0Mi4yLDEyLDQwLDEyeiIvPg0KPC9nPg0KPC9zdmc+' width='25' height='25'>"+
             "</a>"+name+"</div>";
     }
     else{
         return "<div style='width:270px;'><a href='javascript: function(){return false;}' onclick=OpenClose('"+ElementID+"')>"+
-            "<img id="+ElementID+" src='https://visualpharm.com/assets/889/Folder-595b40b65ba036ed117d40dd.svg' width='25' height='25'>"+
+            "<img id="+ElementID+" src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZBMDAwIiBkPSJNNDAsMTJIMjJsLTQtNEg4Yy0yLjIsMC00LDEuOC00LDR2OGg0MHYtNEM0NCwxMy44LDQyLjIsMTIsNDAsMTJ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZDQTI4IiBkPSJNNDAsMTJIOGMtMi4yLDAtNCwxLjgtNCw0djIwYzAsMi4yLDEuOCw0LDQsNGgzMmMyLjIsMCw0LTEuOCw0LTRWMTZDNDQsMTMuOCw0Mi4yLDEyLDQwLDEyeiIvPg0KPC9nPg0KPC9zdmc+' width='25' height='25'>"+
             "</a><a href=https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx#/subs/"+url+" style='color:black;'>"+name+"</a></div>";
     }
 
@@ -325,6 +362,22 @@ function changeView(){
         menu.innerHTML=Apps_maker();
         setMenuHeight();
     }
+    else if(index==3){
+        menu.innerHTML=My_maker();
+        setMenuHeight();
+    }
+}
+function setDefault(){
+    localStorage.setItem('a', 10);
+}
+function getDefault(){
+    alert('save='+localStorage.getItem('a'));
+}
+function My_maker(){
+    let html=addFloder('腳本設定','Floder0');
+    html+=addItem('預設選項','Floder0','javascript:setDefault()');
+    html+=addItem('預設選項','Floder0','javascript:getDefault() ');
+    return html;
 }
 
 function block_maker(r,g,b,txt,url){
@@ -354,8 +407,8 @@ function oreign_macker(){
 function OpenClose(ElementID){
     let img=document.getElementById(ElementID);
     let menu = document.getElementById('menu');
-    if(img.src=="https://visualpharm.com/assets/889/Folder-595b40b65ba036ed117d40dd.svg"){//view->hide
-        img.src="https://visualpharm.com/assets/479/Open-595b40b85ba036ed117da75e.svg";
+    if(img.src=="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZBMDAwIiBkPSJNNDAsMTJIMjJsLTQtNEg4Yy0yLjIsMC00LDEuOC00LDR2OGg0MHYtNEM0NCwxMy44LDQyLjIsMTIsNDAsMTJ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZDQTI4IiBkPSJNNDAsMTJIOGMtMi4yLDAtNCwxLjgtNCw0djIwYzAsMi4yLDEuOCw0LDQsNGgzMmMyLjIsMCw0LTEuOCw0LTRWMTZDNDQsMTMuOCw0Mi4yLDEyLDQwLDEyeiIvPg0KPC9nPg0KPC9zdmc+"){//view->hide
+        img.src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZBMDAwIiBkPSJNMzgsMTJIMjJsLTQtNEg4Yy0yLjIsMC00LDEuOC00LDR2MjRjMCwyLjIsMS44LDQsNCw0aDMxYzEuNywwLDMtMS4zLDMtM1YxNkM0MiwxMy44LDQwLjIsMTIsMzgsMTJ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZDQTI4IiBkPSJNNDIuMiwxOEgxNS4zYy0xLjksMC0zLjYsMS40LTMuOSwzLjNMOCw0MGgzMS43YzEuOSwwLDMuNi0xLjQsMy45LTMuM2wyLjUtMTRDNDYuNiwyMC4zLDQ0LjcsMTgsNDIuMiwxOHoiLz4NCjwvZz4NCjwvc3ZnPg==";
         var items=document.getElementsByClassName(ElementID);
         totalShowItem+=items.length;
         for(let i=0;i<items.length;i++){
@@ -363,7 +416,7 @@ function OpenClose(ElementID){
         }
     }
     else{
-        img.src="https://visualpharm.com/assets/889/Folder-595b40b65ba036ed117d40dd.svg";
+        img.src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZBMDAwIiBkPSJNNDAsMTJIMjJsLTQtNEg4Yy0yLjIsMC00LDEuOC00LDR2OGg0MHYtNEM0NCwxMy44LDQyLjIsMTIsNDAsMTJ6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZDQTI4IiBkPSJNNDAsMTJIOGMtMi4yLDAtNCwxLjgtNCw0djIwYzAsMi4yLDEuOCw0LDQsNGgzMmMyLjIsMCw0LTEuOCw0LTRWMTZDNDQsMTMuOCw0Mi4yLDEyLDQwLDEyeiIvPg0KPC9nPg0KPC9zdmc+";
         let items=document.getElementsByClassName(ElementID);
         totalShowItem-=items.length;
         for(let i=0;i<items.length;i++){
@@ -373,9 +426,10 @@ function OpenClose(ElementID){
     setMenuHeight();
 }
 function setMenuHeight(){
-    let menuHeight = 360+totalShowItem*23;
-    let menu = document.getElementById('menu');
+    let defaultHeight=[0,225,360,30];
     let index = document.getElementById('MenuType').selectedIndex;
+    let menuHeight = defaultHeight[index]+totalShowItem*23;
+    let menu = document.getElementById('menu');
     if(menuHeight>document.body.clientHeight*0.75&&index!=0){
         menu.style.height=document.body.clientHeight*0.75+'px';
         menu.style.overflow='scroll';
@@ -390,7 +444,9 @@ function hideMenu(OpenAlert){
     var menu = document.getElementsByClassName('ng-binding div-Balloon')[0];
     menu.setAttribute("class","ng-binding div-Balloon div-Balloon-hide");
     if(OpenAlert==1){
+        LoadFinish=false;
         Alert('頁面載入中...');
+        LoadTimer = setTimeout(function(){openPageFalied()},8000);
     }
 }
 function Alert(str) {
@@ -457,13 +513,27 @@ function Alert(str) {
     txt.style.margin="16px 0";
     txt.innerHTML = str;
     document.getElementById("alertmsgDiv").appendChild(txt);
+
 }
 function closewin() {
     document.body.removeChild(document.getElementById("alertbgDiv"));
     document.getElementById("alertmsgDiv").removeChild(document.getElementById("alertmsgTitle"));
     document.body.removeChild(document.getElementById("alertmsgDiv"));
 }
+function openPageFalied(){
+    if(LoadFinish==false){
+        LoadFinish=true;
+        closewin();
+        Alert('頁面載入時間過長...');
+        setTimeout(function(){ closewin(); },3000);
+    }
+    else{
+        closewin()
+    }
+}
 function waitLoad(){
+    LoadFinish=true;
+    clearTimeout(LoadTimer);
     closewin();
 }
 function waitLoad3(){
@@ -497,6 +567,13 @@ function start(){
     option.innerHTML='Fcu Apps';
     select.appendChild(option);
 
+    if(devUser==true){
+        option = document.createElement('option');
+        option.setAttribute('value','自訂');
+        option.innerHTML='自訂';
+        select.appendChild(option);
+    }
+
     var div=document.createElement('span');
     div.setAttribute('style','width: 135px; display: inline-block;');
 
@@ -508,12 +585,15 @@ function start(){
     let AllScript = changeView.toString()+'\n'+oreign_macker.toString()+'\n'+block_maker.toString();
     AllScript+='\n'+tree_maker.toString()+'\n'+addFloder.toString()+'\n'+OpenClose.toString();
     AllScript+='\n'+addItem.toString()+'\n'+Apps_maker.toString()+'\n'+hideMenu.toString();
-    AllScript+='\nvar totalShowItem=0;\n'+setMenuHeight.toString()+'document.getElementsByTagName("BODY")[0].onresize = function() {setMenuHeight()};window.onload=waitLoad2;';
-    AllScript+='\n'+waitLoad.toString()+waitLoad2.toString()+waitLoad3.toString()+closewin.toString()+Alert.toString();
+    AllScript+='\nvar totalShowItem=0;\n'+setMenuHeight.toString()+'var LoadTimer="";var LoadFinish=true;document.getElementsByTagName("BODY")[0].onresize = function() {setMenuHeight()};window.onload=waitLoad2;';
+    AllScript+='\n'+waitLoad.toString()+waitLoad2.toString()+waitLoad3.toString()+closewin.toString()+Alert.toString()+My_maker.toString()+ setDefault.toString()+ getDefault.toString();
+    AllScript+='\n'+JsonPaser.toString()+'\n'+openPageFalied.toString();
     script.textContent = AllScript;
     document.body.appendChild(script);
 }
 
 start();
 
+var LoadTimer="";
 var totalShowItem=0;
+var LoadFinish=true;
