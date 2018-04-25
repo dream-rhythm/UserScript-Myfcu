@@ -1,124 +1,124 @@
 var fcuapps_view='{"data":['+
-        '{"txt":"²¦·~¥Í±M°Ï","url":"nil","item":['+
-            '{"txt":"¾Ç¦ìªA»â¨úÂkÁÙ¬d¸ß","url":"SP8100002"},'+
-            '{"txt":"²¦·~Â÷®Õ¬yµ{¸ê°T¬d¸ß","url":"SP810003"},'+
-            '{"txt":"²¦·~¨åÂ§ÁÜ½Ğ¨ç³q°T¸ê®Æ","url":"SP810004"},'+
-            '{"txt":"°İ¨÷¨t²Î","url":"http://survey.fcu.edu.tw/Login.aspx"}'+
+        '{"txt":"ç•¢æ¥­ç”Ÿå°ˆå€","url":"nil","item":['+
+            '{"txt":"å­¸ä½æœé ˜å–æ­¸é‚„æŸ¥è©¢","url":"SP8100002"},'+
+            '{"txt":"ç•¢æ¥­é›¢æ ¡æµç¨‹è³‡è¨ŠæŸ¥è©¢","url":"SP810003"},'+
+            '{"txt":"ç•¢æ¥­å…¸ç¦®é‚€è«‹å‡½é€šè¨Šè³‡æ–™","url":"SP810004"},'+
+            '{"txt":"å•å·ç³»çµ±","url":"http://survey.fcu.edu.tw/Login.aspx"}'+
         ']},'+
-        '{"txt":"¦w©w´N¾Ç±M°Ï","url":"nil","item":['+
-            '{"txt":"´N¾Ç¶U´Ú½u¤W¥Ó½Ğ","url":"SP4100003"},'+
-            '{"txt":"´N¾ÇÀu«İ½u¤W¥Ó½Ğ","url":"SP4100004"},'+
-            '{"txt":"®z¶Õ§U¾Ç½u¤W¥Ó½Ğ","url":"SP4100005"},'+
-            '{"txt":"¥Í¬¡¾Ç²ß¼ú§Uª÷¥Ó½Ğ","url":"SP4100006"},'+
-            '{"txt":"®z¶Õ¾Ç¥Í¸ê®æ¬d®Öµ²ªG¬d¸ß","url":"https://myfcu.fcu.edu.tw/main/S4101/S410106_feered_query.aspx"},'+
-            '{"txt":"®Õ¤º¼ú¾Çª÷","url":"SP4100001"},'+
-            '{"txt":"®Õ¥~¼ú¾Çª÷","url":"SP4100002"},'+
-            '{"txt":"¾Ç²ß«¬­İ¥ôªA°È§U²z¹ê²ß°O¿ı","url":"SP9000001"}'+
+        '{"txt":"å®‰å®šå°±å­¸å°ˆå€","url":"nil","item":['+
+            '{"txt":"å°±å­¸è²¸æ¬¾ç·šä¸Šç”³è«‹","url":"SP4100003"},'+
+            '{"txt":"å°±å­¸å„ªå¾…ç·šä¸Šç”³è«‹","url":"SP4100004"},'+
+            '{"txt":"å¼±å‹¢åŠ©å­¸ç·šä¸Šç”³è«‹","url":"SP4100005"},'+
+            '{"txt":"ç”Ÿæ´»å­¸ç¿’çåŠ©é‡‘ç”³è«‹","url":"SP4100006"},'+
+            '{"txt":"å¼±å‹¢å­¸ç”Ÿè³‡æ ¼æŸ¥æ ¸çµæœæŸ¥è©¢","url":"https://myfcu.fcu.edu.tw/main/S4101/S410106_feered_query.aspx"},'+
+            '{"txt":"æ ¡å…§çå­¸é‡‘","url":"SP4100001"},'+
+            '{"txt":"æ ¡å¤–çå­¸é‡‘","url":"SP4100002"},'+
+            '{"txt":"å­¸ç¿’å‹å…¼ä»»æœå‹™åŠ©ç†å¯¦ç¿’è¨˜éŒ„","url":"SP9000001"}'+
         ']},'+
-        '{"txt":"§Úªº³{¥Ò","url":"nil","item":['+
-            '{"txt":"¾Ç¥Íºî¦X¸ê®Æ¥d","url":"SP1000001"},'+
-            '{"txt":"§Ğ¨k§L§Ğª¬ªp½Õ¬d","url":"SP1100012"},'+
+        '{"txt":"æˆ‘çš„é€¢ç”²","url":"nil","item":['+
+            '{"txt":"å­¸ç”Ÿç¶œåˆè³‡æ–™å¡","url":"SP1000001"},'+
+            '{"txt":"å½¹ç”·å…µå½¹ç‹€æ³èª¿æŸ¥","url":"SP1100012"},'+
             '{"txt":"Learning Portfolio","url":"https://myfcu.fcu.edu.tw/main/S4208/S4208_learningportfolio_ldap.aspx?ItemParam=Learning"},'+
-            '{"txt":"®aªø¸ê°T¨t²Î±Ò°Ê§@·~","url":"SP1100009"},'+
-            '{"txt":"NID±K½XÅÜ§ó","url":"https://netid.fcu.edu.tw/"},'+
-            '{"txt":"·N¨£¦^õX¦^ÂĞ","url":"SP1100011"}'+
+            '{"txt":"å®¶é•·è³‡è¨Šç³»çµ±å•Ÿå‹•ä½œæ¥­","url":"SP1100009"},'+
+            '{"txt":"NIDå¯†ç¢¼è®Šæ›´","url":"https://netid.fcu.edu.tw/"},'+
+            '{"txt":"æ„è¦‹å›é¥‹å›è¦†","url":"SP1100011"}'+
         ']},'+
-        '{"txt":"¾ÇÂø¶OÃº¶O","url":"nil","item":['+
-            '{"txt":"Ãº¶O¬d¸ß","url":"SP1400002"},'+
-            '{"txt":"´N¾Ç¶U´Ú½u¤W¥Ó½Ğ","url":"SP4100003"},'+
-            '{"txt":"´N¾ÇÀu«İ½u¤W¥Ó½Ğ","url":"SP4100004"},'+
-            '{"txt":"¾ÇÂø¶OÃº¶OÃÒ©ú¥Ó½Ğ","url":"http://140.134.20.15/stumend/login.do?method=verify"},'+
-            '{"txt":"¾ÇÂø¶O¹O´Á¥¼Ãº¸É³æ¥Ó½Ğ½Ğ","url":"http://140.134.20.80/w3000/?ctNode=29423&idPath=10530_29417_29418_29423"},'+
-            '{"txt":"°ê»Ú¥ÍÃº¶O¸É¦L¨t²Î","url":"http://140.134.20.80/w3000/PrintEnLogin.aspx"},'+
-            '{"txt":"¾Ç¥Í·|·|¶OÃº¶O¥Ó½Ğ","url":"SP1400006"},'+
-            '{"txt":"¾ÇÂø¶OÃº¶O¦¬¾Ú","url":"SP1400007"},'+
-            '{"txt":"»OÆW»È¦æ¾ÇÂø¶O¤J¤fºô","url":"https://school.bot.com.tw/twbank.net/index.aspx?pgid=3"},'+
-            '{"txt":"¦æ°Êe»s³æ","url":"https://service202-sds.fcu.edu.tw/tuition/infologin.aspx?ctNode=42171&idPath=10530_29417"}'+
+        '{"txt":"å­¸é›œè²»ç¹³è²»","url":"nil","item":['+
+            '{"txt":"ç¹³è²»æŸ¥è©¢","url":"SP1400002"},'+
+            '{"txt":"å°±å­¸è²¸æ¬¾ç·šä¸Šç”³è«‹","url":"SP4100003"},'+
+            '{"txt":"å°±å­¸å„ªå¾…ç·šä¸Šç”³è«‹","url":"SP4100004"},'+
+            '{"txt":"å­¸é›œè²»ç¹³è²»è­‰æ˜ç”³è«‹","url":"http://140.134.20.15/stumend/login.do?method=verify"},'+
+            '{"txt":"å­¸é›œè²»é€¾æœŸæœªç¹³è£œå–®ç”³è«‹è«‹","url":"http://140.134.20.80/w3000/?ctNode=29423&idPath=10530_29417_29418_29423"},'+
+            '{"txt":"åœ‹éš›ç”Ÿç¹³è²»è£œå°ç³»çµ±","url":"http://140.134.20.80/w3000/PrintEnLogin.aspx"},'+
+            '{"txt":"å­¸ç”Ÿæœƒæœƒè²»ç¹³è²»ç”³è«‹","url":"SP1400006"},'+
+            '{"txt":"å­¸é›œè²»ç¹³è²»æ”¶æ“š","url":"SP1400007"},'+
+            '{"txt":"è‡ºç£éŠ€è¡Œå­¸é›œè²»å…¥å£ç¶²","url":"https://school.bot.com.tw/twbank.net/index.aspx?pgid=3"},'+
+            '{"txt":"è¡Œå‹•eè£½å–®","url":"https://service202-sds.fcu.edu.tw/tuition/infologin.aspx?ctNode=42171&idPath=10530_29417"}'+
         ']},'+
-        '{"txt":"®Õ¶é¥Í¬¡»P±b°È¬d¸ß","item":['+
-            '{"txt":"Åé¾A¯à¬d¸ß¤Î¸Õºâ","url":"SP3300014"},'+
-            '{"txt":"¦Û§Ú°·±dºŞ²z","url":"SP2300001"},'+
-            '{"txt":"­Ó¤H±b°È¬d¸ß","url":"SP1000002"},'+
-            '{"txt":"¼·(¥I)´Ú©ú²Ó¬d¸ß","url":"SP1000003"},'+
-            '{"txt":"©Ò±o©ú²Ó¬d¸ß","url":"SP1000004"},'+
-            '{"txt":"¦UÃş©Ò±o¦©Ãºº[§K¦©Ãº¾Ì³æ","url":"SP1000005"},'+
-            '{"txt":"»È¦æ±b¸¹ºûÅ@","url":"SP1000006"}'+
+        '{"txt":"æ ¡åœ’ç”Ÿæ´»èˆ‡å¸³å‹™æŸ¥è©¢","item":['+
+            '{"txt":"é«”é©èƒ½æŸ¥è©¢åŠè©¦ç®—","url":"SP3300014"},'+
+            '{"txt":"è‡ªæˆ‘å¥åº·ç®¡ç†","url":"SP2300001"},'+
+            '{"txt":"å€‹äººå¸³å‹™æŸ¥è©¢","url":"SP1000002"},'+
+            '{"txt":"æ’¥(ä»˜)æ¬¾æ˜ç´°æŸ¥è©¢","url":"SP1000003"},'+
+            '{"txt":"æ‰€å¾—æ˜ç´°æŸ¥è©¢","url":"SP1000004"},'+
+            '{"txt":"å„é¡æ‰€å¾—æ‰£ç¹³æš¨å…æ‰£ç¹³æ†‘å–®","url":"SP1000005"},'+
+            '{"txt":"éŠ€è¡Œå¸³è™Ÿç¶­è­·","url":"SP1000006"}'+
         ']},'+
-        '{"txt":"½Ò¥~¬¡°Ê»P¥Í¬¡","item":['+
-            '{"txt":"½Ğ°²¨t²Î","url":"SP3800001"},'+
-            '{"txt":"¼úÃg°O¿ı¬d¸ß","url":"SP4300006"},'+
-            '{"txt":"¯Z·F³¡ªA°ÈÃÒ©ú","url":"SP4300007"},'+
-            '{"txt":"®Õ¥»³¡¾÷¨®ÃÒ©âÅÒ¥Ó½Ğ","url":"https://myfcu.fcu.edu.tw/main/S6222/S6222_motorcycle.aspx"},'+
-            '{"txt":"¤G®Õ°Ï¾÷¨®ÃÒ©âÅÒ¥Ó½Ğ","url":"https://myfcu.fcu.edu.tw/main/S6222/S6222_motorcycle_second.aspx"},'+
-            '{"txt":"¨T¨®©âÅÒ(³Õ¤h/¶i­×¾Ç¤h¯Z)","url":"SP9600002"},'+
-            '{"txt":"¥~»y¤åÀË©w¦¨ÁZµn¿ı","url":"https://myfcu.fcu.edu.tw/main/S7304/S7304_enscore-ins.aspx"},'+
-            '{"txt":"ÃÒ·Ó¤W¶Ç¨t²Î","url":"SP4300002"},'+
-            '{"txt":"«DªÀ¹Î¾Ç²ßªí²{¦¨ªG","url":"SP4300003"},'+
-            '{"txt":"ªÀ¹Î¬¡°ÊÅ@·Ó","url":"http://infocenter.fcu.edu.tw/assoc/assoc_login.jsp"},'+
-            '{"txt":"§Ó¤uªA°È®É¼Æµn¿ı","url":"http://sdsweb.oit.fcu.edu.tw/stu_VolServ/loginAction.do"}'+
+        '{"txt":"èª²å¤–æ´»å‹•èˆ‡ç”Ÿæ´»","item":['+
+            '{"txt":"è«‹å‡ç³»çµ±","url":"SP3800001"},'+
+            '{"txt":"çæ‡²è¨˜éŒ„æŸ¥è©¢","url":"SP4300006"},'+
+            '{"txt":"ç­å¹¹éƒ¨æœå‹™è­‰æ˜","url":"SP4300007"},'+
+            '{"txt":"æ ¡æœ¬éƒ¨æ©Ÿè»Šè­‰æŠ½ç±¤ç”³è«‹","url":"https://myfcu.fcu.edu.tw/main/S6222/S6222_motorcycle.aspx"},'+
+            '{"txt":"äºŒæ ¡å€æ©Ÿè»Šè­‰æŠ½ç±¤ç”³è«‹","url":"https://myfcu.fcu.edu.tw/main/S6222/S6222_motorcycle_second.aspx"},'+
+            '{"txt":"æ±½è»ŠæŠ½ç±¤(åšå£«/é€²ä¿®å­¸å£«ç­)","url":"SP9600002"},'+
+            '{"txt":"å¤–èªæ–‡æª¢å®šæˆç¸¾ç™»éŒ„","url":"https://myfcu.fcu.edu.tw/main/S7304/S7304_enscore-ins.aspx"},'+
+            '{"txt":"è­‰ç…§ä¸Šå‚³ç³»çµ±","url":"SP4300002"},'+
+            '{"txt":"éç¤¾åœ˜å­¸ç¿’è¡¨ç¾æˆæœ","url":"SP4300003"},'+
+            '{"txt":"ç¤¾åœ˜æ´»å‹•è­·ç…§","url":"http://infocenter.fcu.edu.tw/assoc/assoc_login.jsp"},'+
+            '{"txt":"å¿—å·¥æœå‹™æ™‚æ•¸ç™»éŒ„","url":"http://sdsweb.oit.fcu.edu.tw/stu_VolServ/loginAction.do"}'+
         ']},'+
-        '{"txt":"±Ğ°È¸ê·½","item":['+
-            '{"txt":"±Ğ¾Ç§U²z(TA)½Ğ¯qºûÅ@","url":"SP3300011"},'+
-            '{"txt":"¸ê¹q¾Ç°|¥D»²¾Çµ{¥Ó½Ğ","url":"SP3300011"},'+
-            '{"txt":"½Ò¨î¾Çµ{¥Ó½Ğ","url":"SP2100002"},'+
-            '{"txt":"¾Ç¤À¾Çµ{¥Ó½Ğ","url":"SP2100003"},'+
-            '{"txt":"»²¨t/Âù¥D­×¥Ó½Ğ","url":"SP2100004"},'+
-            '{"txt":"¾Ç¤À±Ä­p¥Ó½Ğ","url":"SP2100005"},'+
-            '{"txt":"²Ä¤G±Mªø½Òµ{°t·í¬d¸ß","url":"SP2100006"},'+
-            '{"txt":"Âà¨t¥Ó½Ğ¤Î³B²z¶i«×¬d¸ß","url":"SP2100007"},'+
-            '{"txt":"©è§K¾Ç¤À¥Ó½Ğ","url":"SP2200001"},'+
-            '{"txt":"©è§K¾Ç¤À¬d¸ß","url":"SP2200002"},'+
-            '{"txt":"¾Ç²ß«¬­İ¥ôªA°È§U²z´C¦X","url":"http://140.134.20.15/StuWorkerApply/login.jsp?ctNode=14592&idPath=11551_13675"},'+
-            '{"txt":"¬ì§Ş³¡­pµe§U²z¥X¶Ô","url":"SP4200005"}'+
+        '{"txt":"æ•™å‹™è³‡æº","item":['+
+            '{"txt":"æ•™å­¸åŠ©ç†(TA)è«‹ç›Šç¶­è­·","url":"SP3300011"},'+
+            '{"txt":"è³‡é›»å­¸é™¢ä¸»è¼”å­¸ç¨‹ç”³è«‹","url":"SP3300011"},'+
+            '{"txt":"èª²åˆ¶å­¸ç¨‹ç”³è«‹","url":"SP2100002"},'+
+            '{"txt":"å­¸åˆ†å­¸ç¨‹ç”³è«‹","url":"SP2100003"},'+
+            '{"txt":"è¼”ç³»/é›™ä¸»ä¿®ç”³è«‹","url":"SP2100004"},'+
+            '{"txt":"å­¸åˆ†æ¡è¨ˆç”³è«‹","url":"SP2100005"},'+
+            '{"txt":"ç¬¬äºŒå°ˆé•·èª²ç¨‹é…ç•¶æŸ¥è©¢","url":"SP2100006"},'+
+            '{"txt":"è½‰ç³»ç”³è«‹åŠè™•ç†é€²åº¦æŸ¥è©¢","url":"SP2100007"},'+
+            '{"txt":"æŠµå…å­¸åˆ†ç”³è«‹","url":"SP2200001"},'+
+            '{"txt":"æŠµå…å­¸åˆ†æŸ¥è©¢","url":"SP2200002"},'+
+            '{"txt":"å­¸ç¿’å‹å…¼ä»»æœå‹™åŠ©ç†åª’åˆ","url":"http://140.134.20.15/StuWorkerApply/login.jsp?ctNode=14592&idPath=11551_13675"},'+
+            '{"txt":"ç§‘æŠ€éƒ¨è¨ˆç•«åŠ©ç†å‡ºå‹¤","url":"SP4200005"}'+
         ']},'+
-        '{"txt":"½Òªí»P¾Ç²ß¥­¥x","item":['+
-            '{"txt":"§Úªº½Òªí","url":"SP3200004"},'+
+        '{"txt":"èª²è¡¨èˆ‡å­¸ç¿’å¹³å°","item":['+
+            '{"txt":"æˆ‘çš„èª²è¡¨","url":"SP3200004"},'+
             '{"txt":"iLearn 2.0","url":"https://myfcu.fcu.edu.tw/main/S9902/S990203_ilearn2sso_login.aspx"},'+
-            '{"txt":"½u¤W¾Ç²ß´úÅç¥­¥x","url":"http://easytest.lib.fcu.edu.tw/"},'+
-            '{"txt":"±Ğ®v»PTA½Ğ¯q®É¶¡¬d¸ß","url":"SP3300003"},'+
-            '{"txt":"±Ğ¾Ç¤jºõ","url":"https://myfcu.fcu.edu.tw/main/S3205/A320501.aspx?appurl=https://service120-sds.fcu.edu.tw/W320104/W320104.aspx@022"},'+
-            '{"txt":"¦Òµ{ªí","url":"SP3300012"},'+
-            '{"txt":"¸É¦Ò¤Î¯Ê¦Ò¸ê®Æ¬d¸ß","url":"SP3300015"},'+
-            '{"txt":"®Õ»Ú½Òµ{¥æ¬y¥­¥x","url":"http://www.cttlrc.fcu.edu.tw/Across/SUMA001.aspx"},'+
-            '{"txt":"½Òµ{ÀË¯Á¨t²Î","url":"https://myfcu.fcu.edu.tw/main/coursesearch.aspx?sso"},'+
-            '{"txt":"¿ï½Ò¨t²Î","url":"https://course.fcu.edu.tw/"},'+
-            '{"txt":"¿ï½Ò¦a¹Ï","url":"https://myfcu.fcu.edu.tw/main/S3201/S3201_CurriculumMapping_sso.aspx"}'+
+            '{"txt":"ç·šä¸Šå­¸ç¿’æ¸¬é©—å¹³å°","url":"http://easytest.lib.fcu.edu.tw/"},'+
+            '{"txt":"æ•™å¸«èˆ‡TAè«‹ç›Šæ™‚é–“æŸ¥è©¢","url":"SP3300003"},'+
+            '{"txt":"æ•™å­¸å¤§ç¶±","url":"https://myfcu.fcu.edu.tw/main/S3205/A320501.aspx?appurl=https://service120-sds.fcu.edu.tw/W320104/W320104.aspx@022"},'+
+            '{"txt":"è€ƒç¨‹è¡¨","url":"SP3300012"},'+
+            '{"txt":"è£œè€ƒåŠç¼ºè€ƒè³‡æ–™æŸ¥è©¢","url":"SP3300015"},'+
+            '{"txt":"æ ¡éš›èª²ç¨‹äº¤æµå¹³å°","url":"http://www.cttlrc.fcu.edu.tw/Across/SUMA001.aspx"},'+
+            '{"txt":"èª²ç¨‹æª¢ç´¢ç³»çµ±","url":"https://myfcu.fcu.edu.tw/main/coursesearch.aspx?sso"},'+
+            '{"txt":"é¸èª²ç³»çµ±","url":"https://course.fcu.edu.tw/"},'+
+            '{"txt":"é¸èª²åœ°åœ–","url":"https://myfcu.fcu.edu.tw/main/S3201/S3201_CurriculumMapping_sso.aspx"}'+
         ']},'+
-        '{"txt":"¦¨ÁZ¤Î­×½Ò¶i«×","item":['+
-            '{"txt":"ªA°È¾Ç²ß­×½Ò¶i«×","url":"SP3300013"},'+
-            '{"txt":"¾Ş¦æ¤À¼Æ¬d¸ß","url":"SP3500004"},'+
-            '{"txt":"¦¨ÁZ¬d¸ß","url":"SP3500001"},'+
-            '{"txt":"­Ó¤H­×²ß°O¿ı¬d¸ß","url":"SP3500002"},'+
-            '{"txt":"¦¨ÁZº[ÃÒ©ú¤å¥ó¥Ó½Ğ","url":"https://service120.sds.fcu.edu.tw/w3119/alumnilogin.aspx"},'+
-            '{"txt":"§Î¦¨©Êµû¶q","url":"SP3600001"},'+
-            '{"txt":"¾Ç¥Í½Òµ{¾Ç²ß¦^õXªí","url":"SP3600003"}'+
+        '{"txt":"æˆç¸¾åŠä¿®èª²é€²åº¦","item":['+
+            '{"txt":"æœå‹™å­¸ç¿’ä¿®èª²é€²åº¦","url":"SP3300013"},'+
+            '{"txt":"æ“è¡Œåˆ†æ•¸æŸ¥è©¢","url":"SP3500004"},'+
+            '{"txt":"æˆç¸¾æŸ¥è©¢","url":"SP3500001"},'+
+            '{"txt":"å€‹äººä¿®ç¿’è¨˜éŒ„æŸ¥è©¢","url":"SP3500002"},'+
+            '{"txt":"æˆç¸¾æš¨è­‰æ˜æ–‡ä»¶ç”³è«‹","url":"https://service120.sds.fcu.edu.tw/w3119/alumnilogin.aspx"},'+
+            '{"txt":"å½¢æˆæ€§è©•é‡","url":"SP3600001"},'+
+            '{"txt":"å­¸ç”Ÿèª²ç¨‹å­¸ç¿’å›é¥‹è¡¨","url":"SP3600003"}'+
         ']},'+
-        '{"txt":"¦í±J±M°Ï","item":['+
-            '{"txt":"¯²«Î±M°Ï","url":"https://rent.housefun.com.tw/school/fcu/searchlist.aspx"},'+
-            '{"txt":"¦í±JÂI¦W¨t²Î","url":"SP9500005"},'+
-            '{"txt":"±JªÙ©âÅÒ¥Ó½Ğ","url":"SP9500003"},'+
-            '{"txt":"±JªÙ³]³Æºû­×·~°È¥Ó½Ğ","url":"https://myfcu.fcu.edu.tw/main/S4202/S4202_dormRepairList.aspx"}'+
+        '{"txt":"ä½å®¿å°ˆå€","item":['+
+            '{"txt":"ç§Ÿå±‹å°ˆå€","url":"https://rent.housefun.com.tw/school/fcu/searchlist.aspx"},'+
+            '{"txt":"ä½å®¿é»åç³»çµ±","url":"SP9500005"},'+
+            '{"txt":"å®¿èˆæŠ½ç±¤ç”³è«‹","url":"SP9500003"},'+
+            '{"txt":"å®¿èˆè¨­å‚™ç¶­ä¿®æ¥­å‹™ç”³è«‹","url":"https://myfcu.fcu.edu.tw/main/S4202/S4202_dormRepairList.aspx"}'+
         ']},'+
-        '{"txt":"ªÅ¶¡¬d¸ß»P­É¥Î","item":['+
-            '{"txt":"±Ğ«Ç­É¥Î¬d¸ß","url":"SP9300001"},'+
-            '{"txt":"±Ğ«Ç½Òªí¬d¸ß","url":"SP9300002"},'+
-            '{"txt":"¿n¾Ç°ó(¤H³Ğ)ªÅ¶¡­É¥Î","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_learningroom.aspx"},'+
-            '{"txt":"¹Ï®ÑÀ]ªÅ¶¡­É¥Î","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_library.aspx"},'+
-            '{"txt":"Åé¨|³B¤á¥~³õ¦a­É¥Î","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_sport.aspx"}'+
+        '{"txt":"ç©ºé–“æŸ¥è©¢èˆ‡å€Ÿç”¨","item":['+
+            '{"txt":"æ•™å®¤å€Ÿç”¨æŸ¥è©¢","url":"SP9300001"},'+
+            '{"txt":"æ•™å®¤èª²è¡¨æŸ¥è©¢","url":"SP9300002"},'+
+            '{"txt":"ç©å­¸å ‚(äººå‰µ)ç©ºé–“å€Ÿç”¨","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_learningroom.aspx"},'+
+            '{"txt":"åœ–æ›¸é¤¨ç©ºé–“å€Ÿç”¨","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_library.aspx"},'+
+            '{"txt":"é«”è‚²è™•æˆ¶å¤–å ´åœ°å€Ÿç”¨","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_sport.aspx"}'+
         ']},'+
-        '{"txt":"¾Ç®Õ¸ê·½","item":['+
+        '{"txt":"å­¸æ ¡è³‡æº","item":['+
             '{"txt":"Mymail","url":"https://mymail.fcu.edu.tw/"},'+
-            '{"txt":"GomailªA°È","url":"https://myfcu.fcu.edu.tw/main/S9902/gomail.htm"},'+
-            '{"txt":"¶³ºİÀ³¥Îµ{¦¡(CLOUDAPP)","url":"https://cloudapp2.fcu.edu.tw/"},'+
+            '{"txt":"Gomailæœå‹™","url":"https://myfcu.fcu.edu.tw/main/S9902/gomail.htm"},'+
+            '{"txt":"é›²ç«¯æ‡‰ç”¨ç¨‹å¼(CLOUDAPP)","url":"https://cloudapp2.fcu.edu.tw/"},'+
             '{"txt":"Office365","url":"http://www.o365.fcu.edu.tw/"},'+
-            '{"txt":"®Õ¶é³nÅé","url":"http://software-bank.fcu.edu.tw/"},'+
-            '{"txt":"Sky¶³ºİªÅ¶¡","url":"https://sky.fcu.edu.tw/navigate/"},'+
-            '{"txt":"ªk³W¬d¸ß","url":"https://apps.fcu.edu.tw/fculaw/Default.aspx?version=stu"},'+
-            '{"txt":"®Õ¶é·s»D","url":"SP9400003"},'+
-            '{"txt":"®y½Í·|¤½§i¬d¸ß","url":"SP9400004"},'+
-            '{"txt":"®Ñ³øÅu","url":"https://fengchia.sharepoint.com/sites/e-paper/"},'+
-            '{"txt":"³X«È»P¬¡°ÊÁ{®ÉµL½u±b¸¹¥Ó½Ğ","url":"https://wifiguest.fcu.edu.tw/guest/GuestregPage.php?_browser=1"},'+
-            '{"txt":"¾Ç¥Í«H¥ó³q§i","url":"SP1100010"},'+
-            '{"txt":"¥¢ª«©Û»â","url":"http://www.life.fcu.edu.tw/wSite/lp?ctNode=11025&mp=221101&idPath=11020_11025"}'+
+            '{"txt":"æ ¡åœ’è»Ÿé«”","url":"http://software-bank.fcu.edu.tw/"},'+
+            '{"txt":"Skyé›²ç«¯ç©ºé–“","url":"https://sky.fcu.edu.tw/navigate/"},'+
+            '{"txt":"æ³•è¦æŸ¥è©¢","url":"https://apps.fcu.edu.tw/fculaw/Default.aspx?version=stu"},'+
+            '{"txt":"æ ¡åœ’æ–°è","url":"SP9400003"},'+
+            '{"txt":"åº§è«‡æœƒå…¬å‘ŠæŸ¥è©¢","url":"SP9400004"},'+
+            '{"txt":"æ›¸å ±æ”¤","url":"https://fengchia.sharepoint.com/sites/e-paper/"},'+
+            '{"txt":"è¨ªå®¢èˆ‡æ´»å‹•è‡¨æ™‚ç„¡ç·šå¸³è™Ÿç”³è«‹","url":"https://wifiguest.fcu.edu.tw/guest/GuestregPage.php?_browser=1"},'+
+            '{"txt":"å­¸ç”Ÿä¿¡ä»¶é€šå‘Š","url":"SP1100010"},'+
+            '{"txt":"å¤±ç‰©æ‹›é ˜","url":"http://www.life.fcu.edu.tw/wSite/lp?ctNode=11025&mp=221101&idPath=11020_11025"}'+
         ']}'+
     ']}';
