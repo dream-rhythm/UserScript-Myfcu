@@ -73,7 +73,7 @@ var fcuapps_view='{"data":['+
         ']},'+
         '{"txt":"課表與學習平台","item":['+
             '{"txt":"我的課表","url":"SP3200004"},'+
-			'{"txt":"學生簽到","url":"https://signin.fcu.edu.tw/clockin/login.aspx"}'+
+			'{"txt":"學生簽到","url":"https://signin.fcu.edu.tw/clockin/login.aspx"},'+
             '{"txt":"iLearn 2.0","url":"https://myfcu.fcu.edu.tw/main/S9902/S990203_ilearn2sso_login.aspx"},'+
             '{"txt":"線上學習測驗平台","url":"http://easytest.lib.fcu.edu.tw/"},'+
             '{"txt":"教師與TA請益時間查詢","url":"SP3300003"},'+
