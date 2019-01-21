@@ -73,6 +73,7 @@ var fcuapps_view='{"data":['+
         ']},'+
         '{"txt":"課表與學習平台","item":['+
             '{"txt":"我的課表","url":"SP3200004"},'+
+			'{"txt":"學生簽到","url":"https://signin.fcu.edu.tw/clockin/login.aspx"}'+
             '{"txt":"iLearn 2.0","url":"https://myfcu.fcu.edu.tw/main/S9902/S990203_ilearn2sso_login.aspx"},'+
             '{"txt":"線上學習測驗平台","url":"http://easytest.lib.fcu.edu.tw/"},'+
             '{"txt":"教師與TA請益時間查詢","url":"SP3300003"},'+
@@ -102,17 +103,16 @@ var fcuapps_view='{"data":['+
         '{"txt":"空間查詢與借用","item":['+
             '{"txt":"教室借用查詢","url":"SP9300001"},'+
             '{"txt":"教室課表查詢","url":"SP9300002"},'+
-            '{"txt":"積學堂(人創)空間借用","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_learningroom.aspx"},'+
-            '{"txt":"圖書館空間借用","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_library.aspx"},'+
-            '{"txt":"體育處戶外場地借用","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_sport.aspx"}'+
+            '{"txt":"積學堂(人創)空間借用","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_learningroom.aspx?room=learningroom"},'+
+            '{"txt":"圖書館空間借用","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_library.aspx?room=library"},'+
+            '{"txt":"體育處戶外場地借用","url":"https://myfcu.fcu.edu.tw/main/S5672/S5672_sport.aspx?room=sport"}'+
         ']},'+
         '{"txt":"學校資源","item":['+
-            '{"txt":"Mymail","url":"https://mymail.fcu.edu.tw/"},'+
             '{"txt":"Gomail服務","url":"https://myfcu.fcu.edu.tw/main/S9902/gomail.htm"},'+
-            '{"txt":"雲端應用程式(CLOUDAPP)","url":"https://cloudapp2.fcu.edu.tw/"},'+
+            '{"txt":"雲端應用程式(CLOUDAPP)","url":"https://cloudapp.fcu.edu.tw/"},'+
+			'{"txt":"個人網頁空間(MyWeb)","url":"http://myweb.fcu.edu.tw/"},'+
             '{"txt":"Office365","url":"http://www.o365.fcu.edu.tw/"},'+
             '{"txt":"校園軟體","url":"http://software-bank.fcu.edu.tw/"},'+
-            '{"txt":"Sky雲端空間","url":"https://sky.fcu.edu.tw/navigate/"},'+
             '{"txt":"法規查詢","url":"https://apps.fcu.edu.tw/fculaw/Default.aspx?version=stu"},'+
             '{"txt":"校園新聞","url":"SP9400003"},'+
             '{"txt":"座談會公告查詢","url":"SP9400004"},'+
