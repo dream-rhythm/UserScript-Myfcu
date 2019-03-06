@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Myfcu++
-// @namespace    http://nicky.esy.es/
+// @namespace    https://nicky.tw
 // @version      1.0
 // @description  Change Myfcu menu to tree mode
 // @author       Dream_Rhythm
 // @match        https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx*
 // @match        https://myfcu.fcu.edu.tw/main/InfoMyFcuLogin.aspx
-// @downloadURL  http://nicky.esy.es/UserScript/Myfcu.user.js
+// @downloadURL  https://nicky.tw/UserScript/Myfcu.user.js
 // ==/UserScript==
 
 function tree_maker(parent,name,FCUTree){
