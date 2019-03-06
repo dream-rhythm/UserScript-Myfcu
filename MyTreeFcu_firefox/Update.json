@@ -1,0 +1,10 @@
+{
+  "addons": {
+    "addon@example.com": {
+      "updates": [
+        { "version": "1.0",
+          "update_link": "https://github.com/fcu-d0441320/MyTreeFcu_firefox/MyTreeFcu.xpi" },
+      ]
+    }
+  }
+}
