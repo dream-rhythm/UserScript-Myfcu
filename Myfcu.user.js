@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         Myfcu++
-// @namespace    https://nicky.tw
-// @version      1.0
+// @namespace    http://nicky.esy.es/
+// @version      1.1
 // @description  Change Myfcu menu to tree mode
 // @author       Dream_Rhythm
 // @match        https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx*
 // @match        https://myfcu.fcu.edu.tw/main/InfoMyFcuLogin.aspx
-// @downloadURL  https://nicky.tw/UserScript/Myfcu.user.js
+// @downloadURL  http://nicky.esy.es/UserScript/Myfcu.user.js
 // ==/UserScript==
 
 function tree_maker(parent,name,FCUTree){
-    $.each(FCUTree.d.tree,function(idx,value){
+    $.each(FCUTree.menu.tree,function(idx,value){
         makeFolder(parent,name+idx,value);
     })
 }
@@ -128,7 +128,7 @@ function GetAllAPP(){
        },
        success: function(data) {
            tree_maker($('#menu_oritree'),'oriFolder',data);
-           $.each(data.d.list,function(idx,value){
+           $.each(data.menu.list,function(idx,value){
                makeSearchItem($("#menu_search"),value);
            })
            $.each($("#menu_search a"),function(idx,ele){
