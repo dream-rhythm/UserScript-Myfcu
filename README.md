@@ -34,11 +34,14 @@
 
 ### 安裝方法(Firefox、Chrome、Edge、Safari、Opera Next)
 1. 安裝附加元件[Tampermonkey](https://tampermonkey.net/)  
-2. 前往以下網站安裝[腳本](https://github.com/fcu-d0441320/UserScript-Myfcu/releases/download/v1.0/Myfcu.user.js)  
+2. 前往以下網站安裝[腳本](https://github.com/fcu-d0441320/UserScript-Myfcu/releases/download/v1.1/Myfcu.user.js)  
 3. 前往[MyFcu](https://myfcu.fcu.edu.tw)登入網站  
 4. 點擊左上角選單，更改為Fcu Apps即可
 
 ### 版本訊息
+- Ver 1.1
+  1. 修正官方API更換格式問題
+
 - Ver 1.0(Firefox add-on v1.1)
   1. 修正API與官方對接
   2. 新增搜尋功能
