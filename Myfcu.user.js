@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Myfcu++
-// @namespace    http://nicky.esy.es/
-// @version      1.1
+// @namespace    http://nicky.tw/
+// @version      1.2
 // @description  Change Myfcu menu to tree mode
 // @author       Dream_Rhythm
 // @match        https://myfcu.fcu.edu.tw/main/webClientMyFcuMain.aspx*
 // @match        https://myfcu.fcu.edu.tw/main/InfoMyFcuLogin.aspx
-// @downloadURL  http://nicky.esy.es/UserScript/Myfcu.user.js
+// @downloadURL  https://nicky.tw/UserScript/Myfcu.user.js
 // ==/UserScript==
 
 function tree_maker(parent,name,FCUTree){
@@ -83,7 +83,7 @@ function makeSearchItem(parent,data){
     let isfind=false;
     $.each($("#menu_search a"),function(idx,ele){
         let thisStr = ele.innerHTML;
-        if(thisStr.match(data.name)!=null){
+        if(thisStr===data.name){
             isfind=true;
         }
     })

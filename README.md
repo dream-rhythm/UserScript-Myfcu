@@ -18,27 +18,17 @@
 
 - O : 支援    X : 不支援  ? : 未實驗 
 
-### 安裝方法(限Firefox、Firefox for Android)
-1. [點我](https://github.com/fcu-d0441320/UserScript-Myfcu/releases/download/v1.0/mytreefcu-1.1-an+fx.xpi)安裝附加元件
-2. 於彈出式視窗同意附加元件安裝
-3. 前往[MyFcu](https://myfcu.fcu.edu.tw)登入網站  
-4. 點擊左上角選單，更改為Fcu Apps即可
-
-### 安裝方法(限Chrome，不建議)
-1. [點我](https://github.com/fcu-d0441320/UserScript-Myfcu/releases/download/v1.0/MyTreeFcu_chrome.crx)下載附加元件
-2. 將副檔名改為"zip"後解壓縮
-3. 到chrome->更多工具->擴充功能->開發人員模式->載入未封裝項目
-4. 選擇資料夾到剛剛解壓縮的地方
-5. 前往[MyFcu](https://myfcu.fcu.edu.tw)登入網站  
-6. 點擊左上角選單，更改為Fcu Apps即可
-
 ### 安裝方法(Firefox、Chrome、Edge、Safari、Opera Next)
 1. 安裝附加元件[Tampermonkey](https://tampermonkey.net/)  
-2. 前往以下網站安裝[腳本](https://github.com/fcu-d0441320/UserScript-Myfcu/releases/download/v1.1/Myfcu.user.js)  
+2. 前往以下網站安裝[腳本](https://nicky.tw/UserScript/Myfcu.user.js)  
 3. 前往[MyFcu](https://myfcu.fcu.edu.tw)登入網站  
 4. 點擊左上角選單，更改為Fcu Apps即可
 
 ### 版本訊息
+- Ver 1.2
+  1. 修正搜尋欄缺少部分按鈕問題
+  2. 更新下載點為https
+
 - Ver 1.1
   1. 修正官方API更換格式問題
 
